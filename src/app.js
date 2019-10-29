@@ -5,7 +5,7 @@ const geocode=require('./geocode')
 const weather =require('./weather')
 
 const app =express()
-
+const port =process.env.PORT ||3000
 
 const pathDir= path.join(__dirname,'../public')
 
@@ -47,6 +47,6 @@ app.get('/help',(req,res)=>{
         
 
 
-app.listen(3000,()=>{
-    console.log('hello in console')
+app.listen(port,()=>{
+    console.log('server is up on port'+port)
 })
